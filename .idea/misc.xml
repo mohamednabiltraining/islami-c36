@@ -12,6 +12,7 @@
         <entry key="app/src/main/res/layout/fragment_radio.xml" value="0.23125" />
         <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.27708333333333335" />
         <entry key="app/src/main/res/layout/fragment_tasbeh.xml" value="0.23125" />
+        <entry key="app/src/main/res/layout/item_sura_name.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/menu/home_bottom_navigation_menu.xml" value="0.21875" />
       </map>
     </option>
