@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IslamiC36">
         <activity
+            android:name=".suraDetails.SuraDetailsActivity"
+            android:label="@string/title_activity_sura_details"
+            android:theme="@style/Theme.IslamiC36.NoActionBar"></activity>
+        <activity
             android:name=".home.HomeActivity"
             android:exported="true"
             android:theme="@style/NoActionBar" />
