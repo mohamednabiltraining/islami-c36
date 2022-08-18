@@ -1,7 +1,7 @@
 package com.route.islamic36.home.quran
 
 
-import android.content.Intent
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -9,7 +9,6 @@ import android.widget.ImageView
 import android.widget.ScrollView
 import android.widget.TextView
 import com.route.islamic36.R
-import com.route.islamic36.adapter.SuraNameAdapter
 import java.io.IOException
 
 
@@ -34,7 +33,7 @@ class SuraDetails : AppCompatActivity() {
 
     private fun showSuraContent(pos:Int) {
 
-        var suraContent : String = ""
+        var suraContent = ""
 
         try {
             var suraNum : String = pos.toString()

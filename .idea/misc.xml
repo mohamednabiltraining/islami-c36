@@ -6,12 +6,14 @@
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.23125" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25677083333333334" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.13489583333333333" />
+        <entry key="app/src/main/res/layout/activity_sura_details.xml" value="0.11197916666666667" />
         <entry key="app/src/main/res/layout/fragment_hadeth.xml" value="0.23125" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.25677083333333334" />
         <entry key="app/src/main/res/layout/fragment_quran.xml" value="0.23125" />
         <entry key="app/src/main/res/layout/fragment_radio.xml" value="0.23125" />
         <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.27708333333333335" />
         <entry key="app/src/main/res/layout/fragment_tasbeh.xml" value="0.23125" />
+        <entry key="app/src/main/res/layout/item_chapter_name.xml" value="0.11197916666666667" />
         <entry key="app/src/main/res/menu/home_bottom_navigation_menu.xml" value="0.21875" />
       </map>
     </option>
