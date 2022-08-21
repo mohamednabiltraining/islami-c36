@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tool="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/chapter_name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Al Fatiha"
+        android:padding="12dp"
+        android:textSize="24sp"
+        tool:layout_constraintStart_toStartOf="parent"
+        tool:layout_constraintEnd_toEndOf="parent"
+        tool:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/black"
+        android:fontFamily="@font/elmessiri_semibold"
+        />
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/gold"
+        tool:layout_constraintWidth_percent=".7"
+        tool:layout_constraintStart_toStartOf="parent"
+        tool:layout_constraintEnd_toEndOf="parent"
+        tool:layout_constraintTop_toBottomOf="@id/chapter_name_label"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
