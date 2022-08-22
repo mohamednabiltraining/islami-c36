@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SuraDetailsActivity">
+    android:background="@drawable/main_background"
+    tools:context=".sura_details.SuraDetailsActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--
+    data binding == viewBinding
+    -->
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/layout_app_bar" />
+
+    <include
+        android:id="@+id/content"
+        layout="@layout/content_sura_details" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

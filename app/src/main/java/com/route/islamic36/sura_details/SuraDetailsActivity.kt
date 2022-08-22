@@ -1,21 +1,36 @@
-package com.route.islamic36
+package com.route.islamic36.sura_details
 
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.route.Constants
+import com.route.islamic36.databinding.ActivitySuraDetailsBinding
 import java.io.BufferedReader
 import java.io.IOException
 import java.io.InputStreamReader
 
 class SuraDetailsActivity : AppCompatActivity() {
+
+    lateinit var binding: ActivitySuraDetailsBinding
     lateinit var versesList: List<String>
+    lateinit var adapter: VersesAdapter
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sura_details)
+        binding = ActivitySuraDetailsBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        binding.appBar.back.setOnClickListener {
+            onBackPressed()
+        }
         val name: String = intent.getStringExtra(Constants.EXTRA_SURA_NAME) ?: "";
         val pos: Int = intent.getIntExtra(Constants.EXTRA_SURA_POS, 0)
         readSura(pos)
+        binding.content.suraName.text = name
+        adapter = VersesAdapter(versesList)
+        binding.content.recyclerView.adapter = adapter
+
+
     }
 
     fun readSura(pos: Int) {

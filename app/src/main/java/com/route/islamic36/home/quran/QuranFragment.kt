@@ -6,10 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.RecyclerView
 import com.route.Constants
-import com.route.islamic36.R
-import com.route.islamic36.SuraDetailsActivity
+import com.route.islamic36.databinding.FragmentQuranBinding
+import com.route.islamic36.sura_details.SuraDetailsActivity
 
 class QuranFragment : Fragment() {
     var arNames = listOf(
@@ -129,23 +128,23 @@ class QuranFragment : Fragment() {
         "الناس"
     )
     lateinit var adapter: ChapterRecyclerAdapter
-    lateinit var recyclerView: RecyclerView
+    lateinit var viewBinding: FragmentQuranBinding
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(
-            R.layout.fragment_quran,
+    ): View {
+        viewBinding = FragmentQuranBinding.inflate(
+            layoutInflater,
             container, false
         );
+        return viewBinding.root;
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        recyclerView = view.findViewById(R.id.recycler_view)
         adapter = ChapterRecyclerAdapter(arNames)
-        recyclerView.adapter = adapter
+        viewBinding.recyclerView.adapter = adapter
         adapter.onItemClickListener = object : ChapterRecyclerAdapter.OnItemClickListener {
             override fun onItemClick(pos: Int, item: String) {
                 val intent = Intent(activity, SuraDetailsActivity::class.java);
