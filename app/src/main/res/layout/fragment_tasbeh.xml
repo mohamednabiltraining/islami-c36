@@ -1,6 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background">
+
+    <ImageView
+        android:id="@+id/head_sebha"
+        android:layout_width="50dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="30dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/head_sebha_logo"
+        app:layout_constraintBottom_toBottomOf="@+id/horizntal_guidlinefor_head"
+        app:layout_constraintEnd_toEndOf="@id/sebha_body"
+        app:layout_constraintStart_toStartOf="@id/sebha_body"
+        app:layout_constraintTop_toBottomOf="@id/horizntal_guidline" />
+
+    <ImageView
+        android:id="@+id/sebha_body"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/body_sebha_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizntal_guidlinefor_head" />
+
+    <TextView
+        android:id="@+id/title_text_islami"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dthuluth"
+        android:text="اسلامى"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tsbehat_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="45dp"
+        android:text="عدد التسبيحات"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sebha_body" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/azkar_btn"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="35dp"
+        android:background="@drawable/rounded_white_rectangle"
+        android:backgroundTint="@color/gold"
+        android:fontFamily="@font/dthuluth"
+        android:text="سبحان الله"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tsbehat_text" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/counter_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:background="@drawable/rounded_white_rectangle"
+        android:backgroundTint="#CCA875"
+        android:text="0"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/azkar_btn" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guidline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="200dp" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizntal_guidline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="130dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizntal_guidlinefor_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="170dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

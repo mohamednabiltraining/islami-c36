@@ -10,19 +10,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IslamiC36">
         <activity
+            android:name=".home.hadeth.hadethDetails.HadethDetailsActivity"
+            android:exported="true"
+            android:label="@string/title_activity_hadeth_details"
+            android:parentActivityName=".home.HomeActivity"
+            android:theme="@style/Theme.IslamiC36.NoActionBar" />
+        <activity
+            android:name=".home.quran.suraDetails.SuraDetailsActivity"
+            android:exported="true"
+            android:label="@string/title_activity_sura_details"
+            android:parentActivityName=".home.HomeActivity"
+            android:theme="@style/Theme.IslamiC36.NoActionBar" />
+        <activity
             android:name=".home.HomeActivity"
             android:exported="true"
-            android:theme="@style/NoActionBar" />
-        <activity
-            android:name=".SplashScreen"
-            android:exported="true"
-            android:theme="@style/NoActionBar">
+            android:theme="@style/NoActionBar"></activity>
+        <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

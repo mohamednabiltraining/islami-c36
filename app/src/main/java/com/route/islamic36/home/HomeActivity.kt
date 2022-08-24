@@ -12,31 +12,28 @@ import com.route.islamic36.home.tasbeh.TasbehFragment
 
 class HomeActivity : AppCompatActivity() {
     lateinit var bottomNavigation: BottomNavigationView
-
-    // search ViewBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-        bottomNavigation = findViewById(R.id.bottom_navigation)
+        bottomNavigation = findViewById(R.id.home_bottom_navigation)
         bottomNavigation.setOnItemSelectedListener { item ->
             val itemId = item.itemId;
             if (itemId == R.id.navigation_quran) {
-                showFragment(QuranFragment())
+                pushFragment(QuranFragment())
             } else if (itemId == R.id.navigation_hadeth) {
-                showFragment(HadethFragment())
+                pushFragment(HadethFragment())
             } else if (itemId == R.id.navigation_radio) {
-                showFragment(RadioFragment())
+                pushFragment(RadioFragment())
             } else if (itemId == R.id.navigation_sebha) {
-                showFragment(TasbehFragment())
+                pushFragment(TasbehFragment())
             }
             true;
         }
         bottomNavigation.selectedItemId = R.id.navigation_quran
     }
 
-    fun showFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, fragment)
+    private fun pushFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction().replace(R.id.fragment_container, fragment)
             .commit()
     }
 }
