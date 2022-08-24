@@ -1,6 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background">
+
+    <TextView
+        android:id="@+id/title_text_islami"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dthuluth"
+        android:text="اسلامى"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/radio_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="100dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/radio_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/radio_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:text="اذاعة القران الكريم"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radio_image" />
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        app:layout_constraintEnd_toEndOf="@id/radio_text"
+        app:layout_constraintStart_toStartOf="@id/radio_text"
+        app:layout_constraintTop_toBottomOf="@id/radio_text">
+
+        <Button
+            android:id="@+id/backbtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/back_radio" />
+
+        <Button
+            android:id="@+id/playbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/ic_play" />
+
+        <Button
+            android:id="@+id/nextbtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/next_radio" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
