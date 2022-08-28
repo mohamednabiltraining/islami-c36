@@ -2,4 +2,13 @@
     <string name="app_name">islamiC36</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="eslami">إسلامي</string>
+
+    <string-array name="zekr">
+        <item>سبحان الله</item>
+        <item>الله اكبر</item>
+        <item>لا اله الا الله</item>
+        <item>الحمد لله</item>
+        <item>استغفر الله</item>
+    </string-array>
 </resources>

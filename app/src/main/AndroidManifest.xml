@@ -9,14 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.IslamiC36">
+
+        <activity android:name=".home.quran.SuraDetails"
+            android:theme="@style/NoActionBar"
+
+            />
+        <activity android:name=".home.hadeth.HadethDetails"
+            android:theme="@style/NoActionBar"
+            />
         <activity
             android:name=".home.HomeActivity"
             android:exported="true"
             android:theme="@style/NoActionBar" />
+
         <activity
             android:name=".SplashScreen"
             android:exported="true"
             android:theme="@style/NoActionBar">
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
