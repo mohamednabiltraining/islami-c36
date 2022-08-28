@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.route.islamic36.R
@@ -28,6 +29,8 @@ class HadethFragment : Fragment() {
         val view = binding.root
         return view
     }
+
+
 
     lateinit var recycler: RecyclerView
     lateinit var adapter: HadethNameAdapter
