@@ -22,7 +22,7 @@
     </style>
 
     <style name="BottomNavTheme" parent="Widget.Design.BottomNavigationView">
-        <item name="itemBackground">@color/gold</item>
+        <item name="itemBackground">@color/navy</item>
         <item name="tint">@color/white</item>
         <item name="color">@color/white</item>
     </style>
